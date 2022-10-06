@@ -32,7 +32,7 @@ class BlackJack:
             return 2
         elif card == '1' or card == 'A':
             return 1
-    
+
     def higher_card(self, card_one: str, card_two: str) -> int or tuple:
         """Calculamos cual es la carta mayor entre dos cartas
 
@@ -44,12 +44,13 @@ class BlackJack:
             int or tuple: [Regresamos el valor Int de la carta mas alta o un Tuple con el valor de ambas cartas en caso de ser iguales]
         """
         x = self.value_of_card(card_one)
-        y = self.value_of_card(card_two) 
+        y = self.value_of_card(card_two)
         if x > y:
             return card_one
         elif x == y:
             return card_one, card_two
         return card_two
 
+
 bj = BlackJack()
-print(bj.higher_card('1', 'A'))
+print(bj.higher_card('5', 'A'))
